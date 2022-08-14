@@ -1,0 +1,669 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 69%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+}
+
+.choisir {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.choisir h1 {
+    color: black;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.choisir h2 {
+    color: brown;
+    font-size: 2rem;
+}
+
+.choisir .choix {
+    margin-top: 5rem;
+}
+
+.choisir .choix a {
+    color: white;
+    background: brown;
+    font-size: 1.4rem;
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.choisir .choix a:hover {
+    color: brown;
+    background: black;
+    transition: 1s;
+}
+
+
+form {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+form h2 {
+    color: brown;
+    font-size: 2rem;
+}
+
+input {
+    margin-top: 2rem;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 1rem;
+    background: rgb(150, 146, 146);
+    width: 30%;
+    border-radius: 4rem;
+}
+
+input::placeholder {
+    color: black;
+}
+
+textarea {
+    margin-top: 2rem;
+    width: 40%;
+    height: 10rem;
+    border: 2px solid gray;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.envoyer button {
+    margin-top: 2rem;
+    border: 1px solid transparent;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.recommendation p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.recommendation a {
+    color: brown;
+}
+
+.entete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    background: black;
+    padding: 0.2rem;
+    z-index: 1000;
+}
+
+.entete p {
+    font-size: 0.8rem;
+    color: brown;
+    justify-content: space-around;
+    padding-left: 5rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    background: brown;
+    box-shadow: 0px 10px 15px -1px black;
+    padding: 1rem;
+    z-index: 1000;
+    margin-top: 1.2rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo .image img {
+    width: 3rem;
+}
+
+.logo h2 {
+    font-size: 2rem;
+}
+
+.logo span {
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 3px solid black;
+    margin-right: 2rem;
+}
+
+.navbar a:hover {
+    color: black;
+    border-bottom: 3px solid brown;
+}
+
+.icone img {
+    width: 2rem;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.recherche {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 5rem;
+    text-align: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.recherche input {
+    background: white;
+    border: 1px solid rgb(195, 192, 192);
+    padding: 1rem;
+    width: 40%;
+    box-shadow: 10px 10px 35px -10px black;
+}
+
+.recherche button {
+    padding: 0.3rem;
+    background: brown;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-top: 0.3rem;
+    box-shadow: 10px 10px 35px -10px black;
+}
+
+.recherche button img {
+    width: 2rem;
+}
+
+.recherche .type_articles {
+    margin: 2rem;
+    padding: 0.5rem;
+    background-color: brown;
+    border-radius: 2rem;
+    color: white;
+}
+
+.recherche option {
+    background-color: black;
+    color: brown;
+    font-weight: 500;
+}
+
+.nouveau h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: brown;
+    margin-top: 13rem;
+}
+
+.articles {
+    position: relative;
+    margin-top: 1rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.article {
+    width: 27%;
+    padding: 1.5rem;
+    box-shadow: inset 3px 10px 65px 5px brown;
+    border-radius: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: black;
+}
+
+.row img {
+    width: 80%;
+    height: 23rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+.row .description h2 {
+    color: brown;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+}
+
+.row .description p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+}
+
+.row .acheter {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 1px solid black;
+}
+
+.row .acheter h2 {
+    color: brown;
+    font-size: 1.2rem;
+}
+
+.row .acheter button {
+    color: black;
+    font-size: 1.3rem;
+    border: 1px solid transparent;
+    padding: 0.4rem;
+    border-radius: 2rem;
+    background: brown;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+a.btn {
+    color: black;
+    font-size: 1.4rem;
+    background-color: brown;
+    border-radius: 2rem;
+    padding: 0.6rem;
+}
+
+@media(max-width: 1050px) {
+
+    input {
+        margin-top: 2rem;
+        outline: none;
+        border: 1px solid transparent;
+        padding: 1rem;
+        background: rgb(150, 146, 146);
+        width: 40%;
+        border-radius: 4rem;
+    }
+
+    textarea {
+        margin-top: 2rem;
+        width: 40%;
+        height: 10rem;
+        border: 2px solid gray;
+        outline: none;
+    }
+
+    .article {
+        width: 35%;
+        padding: 1.5rem;
+        border: 2px solid black;
+        border-radius: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        background-color: black;
+    }
+}
+
+@media(max-width: 861px) {
+    input {
+        margin-top: 2rem;
+        outline: none;
+        border: 1px solid transparent;
+        padding: 1rem;
+        background: rgb(150, 146, 146);
+        width: 50%;
+        border-radius: 4rem;
+    }
+
+    textarea {
+        margin-top: 2rem;
+        width: 50%;
+        height: 10rem;
+        border: 2px solid gray;
+        outline: none;
+    }
+
+    .recherche input {
+        background: white;
+        border: 1px solid rgb(195, 192, 192);
+        padding: 1rem;
+        width: 50%;
+    }
+
+    .article {
+        width: 48%;
+        padding: 1.5rem;
+        border: 2px solid black;
+        border-radius: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        background-color: black;
+    }
+}
+
+@media(max-width: 625px) {
+    input {
+        margin-top: 2rem;
+        outline: none;
+        border: 1px solid transparent;
+        padding: 1rem;
+        background: rgb(150, 146, 146);
+        width: 60%;
+        border-radius: 4rem;
+    }
+
+    textarea {
+        margin-top: 2rem;
+        width: 60%;
+        height: 10rem;
+        border: 2px solid gray;
+        outline: none;
+    }
+
+    .article {
+        width: 65%;
+        padding: 1.5rem;
+        border: 2px solid black;
+        border-radius: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        background-color: black;
+    }
+
+    .icone {
+        margin-right: 4rem;
+    }
+
+    .icone img {
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .icone img.croix {
+        visibility: hidden;
+    }
+
+    .icone img.croix.ouvrir {
+        visibility: visible;
+    }
+
+    .icone img.bars.ouvrir {
+        visibility: hidden;
+    }
+
+    .navbar.ouvrir {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.6s;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: black;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        padding: 2rem;
+    }
+
+    .navbar a {
+        color: brown;
+        display: block;
+        font-size: 1.6rem;
+        margin: 0.8rem;
+        padding: 0.5rem;
+        background-color: brown;
+        color: white;
+        border-radius: 2rem;
+        padding: 0.5rem;
+    }
+
+    .navbar a:hover {
+        transition: 1s;
+        color: white;
+        border-bottom: 3px solid white;
+    }
+
+    .recherche.ouvrir {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 13rem;
+        text-align: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+}
+
+@media(max-width: 510px) {
+
+    .recherche.fermer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 5rem;
+        text-align: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .recherche input {
+        background: white;
+        border: 1px solid rgb(195, 192, 192);
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .article {
+        width: 80%;
+        padding: 1.5rem;
+        border: 2px solid black;
+        border-radius: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        background-color: black;
+    }
+
+    .nouveau h2 {
+        padding-top: 5rem;
+    }
+}
+
+@media(max-width: 330px) {
+    input {
+        margin-top: 2rem;
+        outline: none;
+        border: 1px solid transparent;
+        padding: 1rem;
+        background: rgb(150, 146, 146);
+        width: 70%;
+        border-radius: 4rem;
+    }
+
+    .article {
+        width: 90%;
+        padding: 1.5rem;
+        border: 2px solid black;
+        border-radius: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        background-color: black;
+    }
+}
+
+@media(max-width: 300px) {
+    .article {
+        width: 100%;
+        padding: 1.5rem;
+        border: 2px solid black;
+        border-radius: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        background-color: black;
+    }
+}
+
+.mes_articles {
+    text-align: center;
+    padding: 1rem;
+}
+
+.mes_articles h2 {
+    color: brown;
+    text-align: center;
+}
+
+.mes_articles p {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+/* pour le page interesser.php */
+.mon_article {
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.titre h2 {
+    color: brown;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.titre p {
+    color: black;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 45px 15px black;
+}
+
+.images img {
+    width: 700px;
+    height: 450px;
+    padding: 2rem;
+}
+
+.descri h2 {
+    color: brown;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.descri h3 {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.prix {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prix h2 {
+    color: brown;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.prix a {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+@media(max-width: 1050px) {
+    .titre h2 {
+        font-size: 1.5rem;
+    }
+
+    .titre p {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width: 730px) {
+    .images img {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media(max-width: 520px) {
+    .images img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .descri {
+        margin: 1rem;
+    }
+}
+
+@media(max-width: 350px) {
+    .images img {
+        width: 240px;
+        height: 200px;
+    }
+
+    .descri {
+        margin: 1rem;
+    }
+}
+
+@media(max-width: 260px) {
+    .images img {
+        width: 200px;
+        height: 200px;
+    }
+}
